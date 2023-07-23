@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pie-shop.css" type="text/css"/>
+    <title>Order | Pie shop</title>
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+<body>
+    <header>
+        <nav class="first">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    
+    <aside><img src="img/bethanylogo.png" alt="Bethany's Pie Shop"/></aside>
+    <main>
+        <h1>Order</h1>
+        <form action="" method="POST">
+            <input type="hidden" id="pie-order" name="pie-order">
+            <input type="hidden" id="location" name="location">
+  
+            <div class="input-group">
+              <div><label for="first-name">First name</label></div>
+              <div><input type="text" name="first-name" id="first-name" /></div>
+            </div>
+  
+            <div class="input-group">
+              <div><label for="last-name">Last name</label></div>
+              <div><input type="text" name="last-name" id="last-name" /></div>
+            </div>
+  
+            <div class="input-group">
+              <div><label for="address">Address</label></div>
+              <div><input type="text" name="address" id="address" /></div>
+            </div>
+  
+            <div class="input-group">
+              <div><label for="state">State</label></div>
+              <div>
+                <select name="state" id="state">
+                  <option value="" selected>[ Select one ]</option>
+                  <option value="Alabama">Alabama</option>
+                  <option value="Alaska">Alaska</option>
+                  <option value="Arizona">Arizona</option>
+                  <option value="Florida">Florida</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Hawaii">Hawaii</option>
+                </select>
+              </div>
+            </div>
+  
+            <div class="input-group">
+              <div><label for="postal-code">Postal code</label></div>
+              <div><input type="text" name="postal-code" id="postal-code" /></div>
+            </div>
+  
+            <div class="input-group">
+              <div><label for="comments">Comments</label></div>
+              <div>
+                <textarea
+                  name="comments"
+                  id="comments"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+  
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Order" />
+          </form>
+    </main>
+    
+</body>
+</html>

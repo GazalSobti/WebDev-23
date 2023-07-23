@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pies|Pie Shop</title>
+    <link rel="stylesheet" href="css/pie-shop.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <style>
+
+
+.columns_desktop{
+        display:flex;
+    }
+.columns{
+    display:flex;
+}
+ .pie{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: aliceblue;
+    border: solid 1px aliceblue;
+}
+.pie img{
+    width: 100%;
+}
+
+.pie .title{
+    font-weight: bold;
+}
+
+.pie .columns{
+    width:100%;
+}
+
+.pie .price{
+    text-align: right;
+}
+
+.pie .columns div{
+    width:50%;
+}
+
+.pie button{
+    background-color:pink ;
+    padding: 10px;
+    border: solid 1px palevioletred;
+    border-radius: 3px;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="first">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside><img src="img/bethanylogo.png" alt="Bethany's Pie Shop"/></aside>
+    
+    <section class="columns_desktop">
+        <div class="pie">
+            <img src="img/applepiesmall.jpg" alt="Apple Pie"/>
+            <div class="columns">
+                <div class="title">Apple Pie</div>
+                <div class="price">$12.00</div>
+            </div>
+            <p class="desc">Famous apple pie</p>
+            <button data-order = "apple-pie">Order</button>
+        </div>
+        <div class="pie">
+            <img src="img/cherrypiesmall.jpg" alt="Cherry Pie"/>
+            <div class="columns">
+                <div class="title">Cherry Pie</div>
+                <div class="price">$15.00</div>
+            </div>
+            <p class="desc">A summer classic!</p>
+            <button data-order = "cherry-pie">Order</button>
+        </div>
+    </section>
+     
+    <footer>Thank you for visiting!! </footer>
+    
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded",function(e){
+        const orderButtons=document.querySelectorAll("button[data-order]");
+
+        orderButtons.forEach(function(button){
+
+            button.addEventListener("click",function(e){
+                const button =e.currentTarget; 
+                const container = button.parentNode;
+                
+                const order={
+                    id: button.getAttribute("data-order"),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                    desc: container.querySelector(".desc").innerText 
+                };
+
+                localStorage.setItem("order",JSON.stringify(order));
+
+                const url = window.location.href.replace("pies.html","order.html");
+
+                window.location.href=url;
+            });    
+                
+
+        });
+    });
+</script>
+</html>
