@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <h2>TASK MANAGER</h2>
+        <hr />
+      </div>
+      <br />
+      <div class="add">
+        <form>
+        <input
+          type="text"
+          id="add-task"
+          name="add-task"
+          placeholder="+ Add Task"
+        />
+        <input type="reset" id="reset-task" name="reset-task" />
+        <button id="additem">Add</button>
+        </form>
+      </div>
+      <br />
+      <div class="current">
+        <h3>Current Tasks</h3>
+        <hr />
+        <ul id="incomplete">
+        </ul>
+      </div>
+
+      <div class="done">
+        <h3>Completed Tasks</h3>
+        <button id="clear">Clear</button>
+        <ul id="Completed">
+        </ul>
+      </div>
+    </main>
+    <script type="text/javascript" src="task.js" ></script>
+  </body>
+</html>
