@@ -1,0 +1,82 @@
+
+
+body {
+  background-color: pink;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(100, 71, 94);
+}
+
+.head {
+  width: 100%;
+  background-color: rgb(159, 107, 147);
+  display: block;
+  padding: 11px;
+  margin-left: 0%;
+  margin-top: 0%;
+  
+}
+.nav-items{
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.nav-items > ul {
+  display: inline;
+  padding: 0;
+
+}
+
+.item{
+  display: inline-block;
+  list-style: none;
+  margin: 0 5px 0 5px;
+  color: aliceblue;
+
+}
+.like-button {
+  cursor: pointer;
+    color:red;
+  padding: 100px 100px 100px 100px;
+  background-color: pink;
+  font-size: 175px;
+border:none;
+ position :relative;
+ 
+  margin-top:0%;
+  margin-left: 37%;
+  
+}
+
+.head-logo{
+  height:50px;
+  width: auto;
+  float:right;
+  position:relative;
+  top: -50px;
+  left: -10px;
+}
+
+.container , form{
+    background-color: rgb(76, 71, 147);
+    justify-content: center;
+    width:50%;
+    margin-left:25%;
+    margin-top:0%;
+    text-align: center;
+    padding:15px;
+    color: pink;
+    border-radius:5em;
+    font-size: 22px;
+}
+
+.form-container{
+  margin-top:5%;
+  width:30%;
+  margin-left: 30%;
+}
+
+.form-ele{
+  margin-top: 1.5em;
+  
+}
