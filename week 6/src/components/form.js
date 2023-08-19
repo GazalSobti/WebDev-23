@@ -18,6 +18,12 @@ export default function MyForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    alert('Your Response has been Submitted');
+    setFormData({name: '',
+    email: '',
+    phno:'',
+    message: ''
+  });
     console.log(formData);
   };
 
