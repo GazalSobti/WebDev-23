@@ -1,0 +1,52 @@
+.App {
+  align-items: center;
+}
+.link-list {
+  width: 100%;
+  background-color: aliceblue;
+  color: #1ac5d1;
+
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: inline-block;
+}
+.link {
+  display: inline;
+  padding-left: 1em;
+  border-radius: 0em;
+  margin-left: 0;
+}
+
+.linkitem {
+  text-decoration: none;
+  background-color: #c5e0e2;
+  padding: 0.5em;
+  border-radius: 1em;
+  color: #077881;
+}
+
+.card {
+  position: relative;
+  left: 25%;
+  text-decoration: none;
+  list-style: none;
+  color: #3f3f3f;
+  border-color: aliceblue;
+  border-radius: 2em;
+  background-color: gainsboro;
+  padding-left: 5em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  width: 30%;
+  margin-bottom: 1em;
+}
+
+.headline {
+  font-weight: 500;
+  font-size: 48px;
+  color: #1ac5d1;
+  position: relative;
+  left: 25%;
+  padding-bottom: 0.5em;
+}
