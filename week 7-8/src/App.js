@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 //import {useState} from "react";
 
@@ -7,34 +7,35 @@ import Items from "./pages/items";
 import Cart from "./pages/cart";
 import NoPage from "./pages/nopage";
 import "./App.css";
-import { fetch_cart } from './store/cartSlice';
+//import { fetch_cart } from './store/cartSlice';
 //import { cartActions } from "./store/cartSlice";
+import { sendCartData } from "./store/cartSlice";
 
 function App() {
   const cart = useSelector((state) => state.cart);
- // const [item,setItem]=useState([]);
+  // const [item,setItem]=useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
-
-    dispatch(fetch_cart(cart));
+    dispatch(sendCartData(cart));
+    //dispatch(fetch_cart(cart));
   }, [cart, dispatch]);
 
- // useEffect(() => {
-//
- //  fetch("https://redux-cart-88c8a-default-rtdb.firebaseio.com/cart.json", {
- //    method: "PUT",
- //    body: JSON.stringify(cart),
- //  })
- //    .then((response) => {
- //      return response.json();
- //    })
- //    .then((data) => {
- //      setItem(data.totalQuantity);
- //    })
- //    .catch((e) => {
- //      console.log(e);
- //    });
+  // useEffect(() => {
+  //
+  //  fetch("https://redux-cart-88c8a-default-rtdb.firebaseio.com/cart.json", {
+  //    method: "PUT",
+  //    body: JSON.stringify(cart),
+  //  })
+  //    .then((response) => {
+  //      return response.json();
+  //    })
+  //    .then((data) => {
+  //      setItem(data.totalQuantity);
+  //    })
+  //    .catch((e) => {
+  //      console.log(e);
+  //    });
   //  console.log(item);
   //}, [cart]);
 
